@@ -41,7 +41,7 @@ def send_message(message = None):
     message_count = len(divided_message) * 2
     send_meta(IP,str(message_count))
 
-    time.sleep(0.8)
+    time.sleep(1)
 
     for current_message in divided_message:
         subprocess.run(['ping', IP, '-p', hex_value(current_message), '-s', str(len(current_message)), '-c', '1'],stdout=subprocess.DEVNULL,stderr=subprocess.STDOUT)
