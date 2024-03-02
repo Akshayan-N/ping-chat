@@ -18,7 +18,7 @@ def main():
     
     full_msg = divide_string(full_msg)
     send_meta(IP,str(len(full_msg)*2))
-    time.sleep(0.8) ##This Sleep time is needed for the receiver to get meta data and start the next capture.
+    time.sleep(1) ##This Sleep time is needed for the receiver to get meta data and start the next capture.
     for msg in full_msg:
         send_message(IP,msg)    
     main()
